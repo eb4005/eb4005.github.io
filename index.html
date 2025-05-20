@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <!-- Navigation -->
   <nav>
     <div class="container">
@@ -22,12 +23,20 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section id="home" class="hero modern-hero">
+    <div class="bg-overlay"></div>
+    <img src="assets/blob.svg" class="hero-blob" alt="Decorative blob" />
     <div class="container">
-      <div class="hero-content">
-        <h1>Hi, I'm <span class="highlight">Edwin Binu</span> 👋</h1>
-        <p class="tagline">AI Engineer | DevOps Enthusiast | MSc AI @ Heriot-Watt</p>
+      <div class="hero-inner">
+        <h1 class="big-heading">
+          Hi, I'm <span class="highlight">Edwin Binu</span>
+          <span class="wave">👋</span>
+        </h1>
+        <p class="tagline">AI Engineer • DevOps Enthusiast • MSc AI @ Heriot-Watt</p>
         <a href="#projects" class="cta-button">View My Work</a>
+        <div class="scroll-indicator">
+          <span></span>
+        </div>
       </div>
     </div>
   </section>
@@ -136,5 +145,6 @@
       </div>
     </div>
   </section>
+
 </body>
 </html>

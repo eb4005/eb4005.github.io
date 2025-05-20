@@ -56,40 +56,116 @@ nav a:hover {
   font-size: 1.5rem;
 }
 
-/* Hero Section */
-.hero {
-  padding: 150px 0 100px;
-  background: linear-gradient(135deg, #007bff, #00ff88);
+/* Modern Hero Section */
+.modern-hero {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(circle at top left, #007bff, #00ff88);
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 20%, transparent 60%);
+  filter: blur(90px);
+  z-index: 0;
+}
+
+.hero-blob {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.big-heading {
+  font-size: 3rem;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .cta-button {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 14px 36px;
   background: white;
   color: #007bff;
-  border-radius: 25px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.3s;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Skills Grid */
+.scroll-indicator {
+  margin-top: 40px;
+}
+
+.scroll-indicator span {
+  display: inline-block;
+  width: 10px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.scroll-indicator span::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: scrollDown 1.2s infinite ease-in-out;
+}
+
+@keyframes scrollDown {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 12px); opacity: 0; }
+}
+
+/* Skills Section */
 .skills {
   padding: 100px 0;
   background: #fff;
@@ -122,7 +198,7 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* Project Cards */
+/* Projects Section */
 .projects {
   padding: 100px 0;
   background: #f0f2f5;

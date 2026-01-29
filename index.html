@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edwin Binu - AI Engineer Portfolio</title>
+
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPLWF319TQ"></script>
   <script>
@@ -27,6 +28,9 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
+        <!-- CV Download (adds directly in navbar) -->
+        <a href="assets/Edwin-Binu.pdf" download class="nav-cv">CV</a>
       </div>
     </div>
   </nav>
@@ -38,11 +42,18 @@
     <div class="container">
       <div class="hero-inner">
         <h1 class="big-heading">
-         Hey I'm <span class="highlight">Edwin Binu</span>
+          Hey I'm <span class="highlight">Edwin Binu</span>
           <span class="wave">👋</span>
         </h1>
         <p class="tagline">AI Engineer • DevOps Enthusiast •Software developer•</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+
+        <div class="hero-actions">
+          <a href="#projects" class="cta-button">View My Work</a>
+
+          <!-- CV Download Button (named CV) -->
+          <a href="assets/Edwin-Binu.pdf" class="cta-button cv-button" download>CV</a>
+        </div>
+
         <div class="scroll-indicator">
           <span></span>
         </div>
@@ -94,7 +105,7 @@
           <div class="project-info">
             <h3>DevOps-based Hospital Management System</h3>
             <p>Microservices with Docker, Kubernetes, MongoDB, CI/CD pipelines, and Agile methodology.</p>
-            <a href="https://github.com/eb4005/hospital-management-devops" class="project-link" target="_blank">View on GitHub →</a>
+            <a href="https://github.com/eb4005/hospital-management-devops" class="project-link" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
         </div>
 
@@ -140,11 +151,19 @@
       <div class="contact-content">
         <div class="contact-info">
           <p><i class="fas fa-envelope"></i> edwinbinu07@gmail.com</p>
+
+          <!-- Optional: CV download also in contact -->
+          <p>
+            <i class="fas fa-file-pdf"></i>
+            <a href="assets/Edwin-Binu.pdf" download>Download CV</a>
+          </p>
+
           <div class="social-links">
-            <a href="https://github.com/eb4005" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/edwin-binu-9b6151192" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/eb4005" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/edwin-binu-9b6151192" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
+
         <form action="https://formspree.io/f/mldbvodk" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />

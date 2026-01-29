@@ -296,3 +296,23 @@ form button {
 form button:hover {
   background: #0056b3;
 }
+
+/* Hero buttons layout */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+/* Make navbar CV look like a button (optional) */
+.nav-cv {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Optional: make CV button slightly different */
+.cv-button {
+  opacity: 0.95;
+}

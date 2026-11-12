@@ -1,8 +1,18 @@
 import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 const Projects = () => {
     const projects = [
+        {
+            title: "MediAssist AI - Medical RAG Chatbot",
+            period: "2025",
+            description: "Medical assistant that reads uploaded patient PDFs (blood tests, pathology reports) with a LangChain RAG pipeline, Groq-hosted Llama 3 / Mixtral, BGE embeddings and FAISS, plus three chat modes and a web-search fallback.",
+            tags: ["LangChain", "RAG", "Groq", "FAISS"],
+            image: null,
+            placeholder: "MA",
+            github: "https://github.com/eb4005/AI-Medical-ChatBot"
+        },
         {
             title: "AI Multi-Agent Finance Assistant",
             period: "Mar - May 2025",
@@ -41,9 +51,9 @@ const Projects = () => {
         },
         {
             title: "AI Resume Scanner",
-            period: "2024",
-            description: "Intelligent resume scanning application utilizing Natural Language Processing to extract and match key skills from candidates.",
-            tags: ["AI", "NLP", "Python"],
+            period: "2025",
+            description: "Full-stack LLM hiring tool deployed on Render: batch-analyses up to 10 resumes against a job description, returning match scores, hire/reject recommendations and skills gaps as structured JSON.",
+            tags: ["React 19", "TypeScript", "Express", "Groq LLM"],
             image: null,
             placeholder: "RS",
             github: "https://github.com/eb4005/AI-Resume-Scanner-"
@@ -81,27 +91,23 @@ const Projects = () => {
         <section id="projects" className="py-24 relative">
             <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-primary/5 pointer-events-none" />
             <div className="container mx-auto px-6 relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16"
-                >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Featured Projects</h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
-                </motion.div>
+                <SectionHeading eyebrow="Things I've built" title="Featured Projects" />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {projects.map((project, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: idx % 2 === 0 ? -60 : 60, y: 30 }}
+                            whileInView={{ opacity: 1, x: 0, y: 0 }}
+                            whileHover={{ y: -8, rotate: idx % 2 === 0 ? -0.6 : 0.6 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-primary/50 flex flex-col h-full cursor-pointer"
+                            transition={{ duration: 0.6, delay: (idx % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                            className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-primary/50 hover:shadow-[0_10px_40px_-10px_rgba(139,92,246,0.4)] flex flex-col h-full cursor-pointer"
+                            role="link"
+                            tabIndex={0}
+                            aria-label={`${project.title} on GitHub`}
                             onClick={() => project.github && window.open(project.github, '_blank')}
+                            onKeyDown={(e) => { if (e.key === 'Enter' && project.github) window.open(project.github, '_blank'); }}
                         >
                             {/* Image or Gradient Placeholder */}
                             <div className="h-40 overflow-hidden relative">

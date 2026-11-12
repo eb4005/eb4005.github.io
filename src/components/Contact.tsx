@@ -15,10 +15,11 @@ const Contact = () => {
                     transition={{ duration: 0.6 }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
+                    <p className="text-sm font-semibold tracking-[0.25em] uppercase text-primary mb-3">Get in touch</p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Let's Connect</h2>
                     <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-8" />
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                        I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                        I'm open to AI Engineer, AI Governance / Responsible AI and AI Automation roles in Dubai and remote. UAE Golden Visa holder, so no sponsorship needed. Drop me a message and I'll get back to you.
                     </p>
                 </motion.div>
 
@@ -49,7 +50,7 @@ const Contact = () => {
                             <a href="https://github.com/eb4005" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-dark transition-colors">
                                 <Github className="w-5 h-5" />
                             </a>
-                            <a href="https://www.linkedin.com/in/edwin-binu-9b6151192" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#0A66C2] hover:border-[#0A66C2] transition-colors">
+                            <a href="https://www.linkedin.com/in/edwin-binu-d11041" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#0A66C2] hover:border-[#0A66C2] transition-colors">
                                 <Linkedin className="w-5 h-5" />
                             </a>
                         </div>
